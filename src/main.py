@@ -32,11 +32,11 @@ def main():
             f.write(final_md_report)
         print(f"📝 中间过程 Markdown 已保存: {md_output_path}")
 
-        # 5. 导出 Word
-        builder = DocxBuilder(output_docx)
-        builder.save_report(final_md_report)
+        # # 5. 导出 Word
+        # builder = DocxBuilder(output_docx)
+        # builder.save_report(final_md_report)
         
-        print(f"\n✨ 任务圆满完成！报告已保存在: {output_docx}")
+        # print(f"\n✨ 任务圆满完成！报告已保存在: {output_docx}")
 
     except Exception as e:
         print(f"💥 系统运行出错: {e}")
