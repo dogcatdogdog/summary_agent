@@ -1,0 +1,61 @@
+{
+  "mission_id": "MS-2026-03-15-X4",
+  "mission_name": "4号水域重要目标打击任务",
+  "core_objective": "4号水域指挥中心精准清除",
+  "start_time": "2026-03-15 14:00:00",
+  "end_time": "2026-03-15 15:30:00",
+  "status": "COMPLETED",
+  "process_loop": "封控—打击—评估",
+  "units": [
+    {
+      "unit_id": "USV-01",
+      "type": "无人船",
+      "role": "封控",
+      "logs": [
+        { "timestamp": "14:10:00", "event": "封控区域建立开始", "coverage": 60 },
+        { "timestamp": "14:30:00", "event": "遭遇强电磁干扰", "status": "INTERFERED" },
+        { "timestamp": "15:00:00", "event": "封控任务强制结束", "coverage": 82, "anomalies": 3 }
+      ]
+    },
+    {
+      "unit_id": "UAV-02",
+      "type": "无人机",
+      "role": "打击",
+      "logs": [
+        { "timestamp": "14:20:00", "event": "目标尝试锁定", "status": "FAILED_TO_LOCK" },
+        { "timestamp": "14:25:00", "event": "盲射打击执行", "hit": 0, "accuracy_m": 12.5 },
+        { "timestamp": "14:35:00", "event": "初步毁伤观测", "damage_percent": 15 }
+      ]
+    },
+    {
+      "unit_id": "UGV-01",
+      "type": "无人车",
+      "role": "评估",
+      "logs": [
+        { "timestamp": "14:45:00", "event": "现场效能评估开始", "points_checked": 4, "threats_found": 1 },
+        { "timestamp": "15:10:00", "event": "最终毁伤确认", "final_damage_confirmed": 38 },
+        { "timestamp": "15:25:00", "event": "撤离完成", "duration_min": 40 }
+      ]
+    }
+  ],
+  "tasks_breakdown": [
+    { "task_name": "战场封控", "assigned_unit": "USV-01", "type": "无人船" },
+    { "task_name": "重要目标打击", "assigned_unit": "UAV-02", "type": "无人机" },
+    { "task_name": "效能评估", "assigned_unit": "UGV-01", "type": "无人车" }
+  ],
+  "telemetry_stats": {
+    "comm_link_stability": 75.5,
+    "avg_uav_battery_remain": 30,
+    "terrain_complexity": "EXTREME"
+  },
+  "evaluation_standards": {
+    "重要目标打击数": "≥1座",
+    "命中数": "≥1次",
+    "目标建筑毁伤率": "≥90%",
+    "封控区域覆盖率": "≥95%",
+    "打击命中精度": "±1米",
+    "效能评估覆盖率": "100%",
+    "友方伤亡数": "0伤亡",
+    "设备损坏数": "≤1台"
+  }
+}

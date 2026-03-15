@@ -1,0 +1,124 @@
+{
+  "mission_id": "MS-2026-03-14-3A",
+  "mission_name": "3号区域重要建筑立体打击任务",
+  "core_objective": "3号区域重要建筑精准摧毁",
+  "start_time": "2026-03-14 09:00:00",
+  "end_time": "2026-03-14 10:30:00",
+  "status": "COMPLETED",
+  "process_loop": "封控—打击—评估—清剿",
+  "units": [
+    {
+      "unit_id": "USV-01",
+      "type": "无人船",
+      "role": "封控",
+      "logs": [
+        {
+          "timestamp": "09:10:00",
+          "event": "封控区域建立",
+          "coverage": 100
+        },
+        {
+          "timestamp": "09:45:00",
+          "event": "外围屏障加固",
+          "status": "OK"
+        },
+        {
+          "timestamp": "10:15:00",
+          "event": "全域巡逻任务结束",
+          "anomalies": 0
+        }
+      ]
+    },
+    {
+      "unit_id": "UAV-02",
+      "type": "无人机",
+      "role": "打击",
+      "logs": [
+        {
+          "timestamp": "09:15:00",
+          "event": "目标建筑锁定",
+          "target_coords": [
+            116.39,
+            39.91
+          ]
+        },
+        {
+          "timestamp": "09:20:00",
+          "event": "首轮打击执行",
+          "hit": 1,
+          "accuracy_m": 0.45
+        },
+        {
+          "timestamp": "09:25:00",
+          "event": "毁伤初步评估",
+          "damage_percent": 72
+        }
+      ]
+    },
+    {
+      "unit_id": "UGV-01",
+      "type": "无人车",
+      "role": "清剿与排查",
+      "logs": [
+        {
+          "timestamp": "09:30:00",
+          "event": "可疑点排查开始",
+          "points_checked": 8,
+          "threats_found": 0
+        },
+        {
+          "timestamp": "10:00:00",
+          "event": "残余目标清剿",
+          "cleanup_rate": 100,
+          "final_damage_confirmed": 96
+        },
+        {
+          "timestamp": "10:20:00",
+          "event": "撤离完成",
+          "duration_min": 50
+        }
+      ]
+    }
+  ],
+  "tasks_breakdown": [
+    {
+      "task_name": "战场封控",
+      "assigned_unit": "USV-01",
+      "type": "无人船"
+    },
+    {
+      "task_name": "重要建筑打击",
+      "assigned_unit": "UAV-02",
+      "type": "无人机"
+    },
+    {
+      "task_name": "可疑目标排查",
+      "assigned_unit": "UGV-01",
+      "type": "无人车",
+      "log_ref": "09:30:00事件"
+    },
+    {
+      "task_name": "残余目标清剿",
+      "assigned_unit": "UGV-01",
+      "type": "无人车",
+      "log_ref": "10:00:00事件"
+    }
+  ],
+  "telemetry_stats": {
+    "comm_link_stability": 99.8,
+    "avg_uav_battery_remain": 45,
+    "terrain_complexity": "HIGH"
+  },
+  "evaluation_standards": {
+    "重要建筑打击数": "≥1座",
+    "命中数": "≥1座",
+    "目标建筑毁伤率": "≥90%",
+    "排查区域数": "≥6处",
+    "发现可疑目标数": "≤1处",
+    "封控区域覆盖率": "≥95%",
+    "打击命中精度": "±1米",
+    "残余目标清剿率": "≥98%",
+    "友方伤亡数": "0伤亡",
+    "设备损坏数": "≤1台"
+  }
+}
